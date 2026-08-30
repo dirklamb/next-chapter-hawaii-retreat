@@ -20,7 +20,7 @@
 
   // ---- Reveal-on-scroll for section titles and cards ----
   var revealTargets = document.querySelectorAll(
-    ".section__title, .heading--functional, .day-row, .price-card, .testimonial-block__grid, .reservation-box, .guest"
+    ".section__title, .heading--functional, .day-row, .price-card, .testimonial-block__grid, .reservation-box, .guest, .tile, .exp-tile"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -55,6 +55,91 @@
       countdownEl.textContent = "Letzter Tag zum Frühbucherpreis — heute endet er.";
     } else {
       countdownEl.textContent = "Der Frühbucherpreis ist abgelaufen. Regulärer Preis: 5.970 €.";
+    }
+  }
+
+  // ---- Exit-intent popup ----
+  var popup = document.getElementById("exitPopup");
+  if (popup) {
+    var SESSION_KEY = "ncExitPopupShown";
+    var popupBody = document.getElementById("exitPopupBody");
+    var popupSuccess = document.getElementById("exitPopupSuccess");
+    var popupForm = document.getElementById("exitPopupForm");
+    var triggered = false;
+
+    function alreadyShown() {
+      try {
+        return sessionStorage.getItem(SESSION_KEY) === "1";
+      } catch (e) {
+        return triggered;
+      }
+    }
+    function markShown() {
+      triggered = true;
+      try {
+        sessionStorage.setItem(SESSION_KEY, "1");
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    function openPopup() {
+      if (alreadyShown()) return;
+      markShown();
+      popup.hidden = false;
+      document.body.style.overflow = "hidden";
+      requestAnimationFrame(function () {
+        popup.classList.add("is-visible");
+      });
+    }
+    function closePopup() {
+      popup.classList.remove("is-visible");
+      document.body.style.overflow = "";
+      setTimeout(function () {
+        popup.hidden = true;
+      }, 300);
+    }
+
+    popup.addEventListener("click", function (e) {
+      if (e.target.hasAttribute("data-close")) closePopup();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !popup.hidden) closePopup();
+    });
+    if (popupForm) {
+      popupForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // NOTE: no backend is wired up yet — this only shows a client-side
+        // confirmation. Connect this form to a real email/CRM endpoint
+        // (e.g. the newsletter tool used for THE NEXT CHAPTER) before launch.
+        popupBody.hidden = true;
+        popupSuccess.hidden = false;
+      });
+    }
+
+    if (window.matchMedia("(min-width: 900px)").matches) {
+      // Desktop: classic exit-intent — mouse leaves toward the browser chrome.
+      document.addEventListener("mouseout", function (e) {
+        if (!e.relatedTarget && e.clientY <= 0) {
+          openPopup();
+        }
+      });
+    } else {
+      // Mobile/tablet: no real exit-intent — trigger after meaningful scroll
+      // depth or, failing that, after a while on the page. Once per session.
+      var scrollTriggered = false;
+      function maybeTriggerOnScroll() {
+        if (scrollTriggered || alreadyShown()) return;
+        var scrolledPast = window.scrollY + window.innerHeight;
+        var pageHeight = document.body.scrollHeight;
+        if (pageHeight > 0 && scrolledPast / pageHeight > 0.55) {
+          scrollTriggered = true;
+          openPopup();
+        }
+      }
+      window.addEventListener("scroll", maybeTriggerOnScroll, { passive: true });
+      setTimeout(function () {
+        if (!scrollTriggered) openPopup();
+      }, 45000);
     }
   }
 })();
