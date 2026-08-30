@@ -23,8 +23,10 @@
 <meta name="twitter:image" content="https://dirklamb.github.io/next-chapter-hawaii-retreat/assets/og-image.jpg">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="assets/hero-kauai-desktop.jpg" media="(min-width: 1100px)">
-<link rel="preload" as="image" href="assets/hero-kauai.jpg" media="(max-width: 1099px)">
+<link rel="preload" as="image" href="assets/hero-kauai.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,15 +48,13 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <div class="hero__media">
-      <picture>
-        <source media="(min-width: 1100px)" srcset="assets/hero-kauai-desktop.jpg">
-        <img src="assets/hero-kauai.jpg" width="1448" height="1086" alt="Sonnenuntergang über der Nā Pali Küste auf Kauaʻi, Blick von einer Lounge-Terrasse mit Feuerschalen über die Steilküste und den Pazifik" fetchpriority="high">
-      </picture>
+      <img src="assets/hero-kauai.jpg" width="1916" height="821" alt="Sonnenuntergang über der Nā Pali Küste auf Kauaʻi, Blick von einer Lounge-Terrasse mit Feuerschalen über die Steilküste und den Pazifik" fetchpriority="high">
       <div class="hero__scrim"></div>
     </div>
     <div class="hero__panel">
-      <p class="eyebrow eyebrow--center">THE NEXT CHAPTER · Kauaʻi, Hawaii · 4.–7. Januar 2027</p>
-      <h1 class="hero__headline">Beginnen Sie 2027 nicht einfach mit neuen Vorsätzen.<br>Beginnen Sie das nächste Kapitel Ihres Lebens und Business.</h1>
+      <p class="eyebrow eyebrow--center eyebrow--on-dark">THE NEXT CHAPTER · Kauaʻi, Hawaii · 4.–7. Januar 2027</p>
+      <h1 class="hero__headline">Beginnen Sie 2027 nicht einfach mit neuen Vorsätzen.</h1>
+      <p class="hero__subline">Beginnen Sie das nächste Kapitel Ihres Lebens und Business.</p>
       <p class="hero__sub">4 Tage auf Kauaʻi für Unternehmer, Coaches und Experten, die spüren: Genauso weiter geht es nicht mehr.</p>
       <p class="hero__promise">Sie verstehen Ihren bisherigen Lebensweg, verwandeln Ihre Soul-Wunde in Kraft, erkennen Soul-Purpose und Soul-Autorität, entwickeln aus Ihrer Soul-Autoritäts-DNA Ihre neue Positionierung, validieren Ihre nächste große Idee und aktivieren die Identität, die Ihr nächstes Kapitel bereits lebt.</p>
 
@@ -92,16 +92,25 @@
   </section>
 
   <!-- ============ TESTIMONIAL 1 ============ -->
-  <section class="section section--testimonial-single">
-    <div class="container container--narrow">
-      <blockquote class="testimonial testimonial--feature">
-        <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
-        <p>[Platzhalter-Testimonial: persönlicher, innerer Durchbruch und neue Klarheit einfügen]</p>
-        <footer>
-          <span class="testimonial__name">Name</span>
-          <span class="testimonial__role">Position / Branche</span>
-        </footer>
-      </blockquote>
+  <section class="section section--island testimonial-block">
+    <div class="container">
+      <div class="testimonial-block__grid">
+        <div class="testimonial-block__portrait" aria-hidden="true">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="92" r="44" fill="currentColor"/>
+            <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+          </svg>
+          <span class="testimonial-block__portrait-label">Foto folgt</span>
+        </div>
+        <blockquote class="testimonial-block__content">
+          <span class="testimonial-block__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial-block__quote">[Platzhalter-Testimonial: persönlicher, innerer Durchbruch und neue Klarheit einfügen]</p>
+          <footer>
+            <span class="testimonial-block__name">Name</span>
+            <span class="testimonial-block__role">Position / Branche</span>
+          </footer>
+        </blockquote>
+      </div>
     </div>
   </section>
 
@@ -116,13 +125,13 @@
   </section>
 
   <!-- ============ WARUM KAUAI ============ -->
-  <section class="section section--emphasis">
+  <section class="section section--island">
     <div class="container container--narrow">
-      <p class="eyebrow">Der Ort</p>
-      <h2 class="section__title">Warum Kauaʻi?</h2>
-      <p>Seit rund 30 Jahren bin ich immer wieder auf Kauaʻi. Für mich ist Kauaʻi die Insel des Lichts und der Transformation, die ursprünglichste, wildeste und spirituell tiefste der hawaiianischen Inseln.</p>
-      <p>Hier erleben Sie das alte Hawaii, nicht als Postkarte, sondern als Land, Kultur und Mana. Natur ist hier nicht Kulisse. Sie konfrontiert, erdet und erinnert. Die Weite des Waimea Canyon. Der Aufstieg auf den Sleeping Giant. Wasser, Wind, Regen, Sonne und Stille.</p>
-      <p class="section__accent">Kauaʻi macht etwas mit Menschen, wenn sie bereit sind, wirklich hinzuhören. Deshalb findet THE NEXT CHAPTER nicht zufällig auf Hawaii statt. Kauaʻi ist Teil der Methode.</p>
+      <p class="eyebrow eyebrow--on-dark">Der Ort</p>
+      <h2 class="section__title section__title--on-dark">Warum Kauaʻi?</h2>
+      <p class="text--on-dark">Seit rund 30 Jahren bin ich immer wieder auf Kauaʻi. Für mich ist Kauaʻi die Insel des Lichts und der Transformation, die ursprünglichste, wildeste und spirituell tiefste der hawaiianischen Inseln.</p>
+      <p class="text--on-dark">Hier erleben Sie das alte Hawaii, nicht als Postkarte, sondern als Land, Kultur und Mana. Natur ist hier nicht Kulisse. Sie konfrontiert, erdet und erinnert. Die Weite des Waimea Canyon. Der Aufstieg auf den Sleeping Giant. Wasser, Wind, Regen, Sonne und Stille.</p>
+      <p class="section__accent section__accent--on-dark">Kauaʻi macht etwas mit Menschen, wenn sie bereit sind, wirklich hinzuhören. Deshalb findet THE NEXT CHAPTER nicht zufällig auf Hawaii statt. Kauaʻi ist Teil der Methode.</p>
     </div>
   </section>
 
@@ -189,7 +198,7 @@
       <h2 class="section__title section__title--center">4 Tage auf Kauaʻi</h2>
     </div>
 
-    <div class="day-band">
+    <div class="day-band day-band--1">
       <div class="container">
         <article class="day-row">
           <div class="day-row__media">
@@ -214,7 +223,7 @@
       </div>
     </div>
 
-    <div class="day-band day-band--alt">
+    <div class="day-band day-band--2">
       <div class="container">
         <article class="day-row day-row--reverse">
           <div class="day-row__media">
@@ -240,7 +249,7 @@
       </div>
     </div>
 
-    <div class="day-band">
+    <div class="day-band day-band--3">
       <div class="container">
         <article class="day-row">
           <div class="day-row__media">
@@ -266,7 +275,7 @@
       </div>
     </div>
 
-    <div class="day-band day-band--alt">
+    <div class="day-band day-band--4">
       <div class="container">
         <article class="day-row day-row--reverse">
           <div class="day-row__media">
@@ -320,16 +329,40 @@
       <p>THE NEXT CHAPTER soll kein importiertes Seminar vor Hawaii-Kulisse sein. Deshalb integrieren wir Menschen, die die Inseln, ihre Kultur und ihre Spiritualität authentisch verkörpern.</p>
       <div class="guest-list">
         <div class="guest">
-          <h3 class="guest__name">Puna Dawson</h3>
-          <p class="guest__role">Spirituelle Botschafterin der hawaiianischen Inseln, seit vielen Jahren Teil meiner Hawaii-Seminare.</p>
+          <div class="guest__portrait" aria-hidden="true">
+            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="92" r="44" fill="currentColor"/>
+              <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="guest__text">
+            <h3 class="guest__name">Puna Dawson</h3>
+            <p class="guest__role">Spirituelle Botschafterin der hawaiianischen Inseln, seit vielen Jahren Teil meiner Hawaii-Seminare.</p>
+          </div>
         </div>
         <div class="guest">
-          <h3 class="guest__name">Roger Denisevicz</h3>
-          <p class="guest__role">Eine persönliche Talk-Story-Perspektive auf Hawaii, Lebensart und das Wesentliche.</p>
+          <div class="guest__portrait" aria-hidden="true">
+            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="92" r="44" fill="currentColor"/>
+              <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="guest__text">
+            <h3 class="guest__name">Roger Denisevicz</h3>
+            <p class="guest__role">Eine persönliche Talk-Story-Perspektive auf Hawaii, Lebensart und das Wesentliche.</p>
+          </div>
         </div>
         <div class="guest">
-          <h3 class="guest__name">Weitere Special Guests</h3>
-          <p class="guest__role">Ausgewählte Gäste aus Kauaʻi, passend zu Kultur, Spiritualität und Transformation.</p>
+          <div class="guest__portrait guest__portrait--muted" aria-hidden="true">
+            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="92" r="44" fill="currentColor"/>
+              <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="guest__text">
+            <h3 class="guest__name">Weitere Special Guests</h3>
+            <p class="guest__role">Ausgewählte Gäste aus Kauaʻi, passend zu Kultur, Spiritualität und Transformation.</p>
+          </div>
         </div>
       </div>
       <p class="fineprint">Die finale Besetzung einzelner Gäste kann sich organisatorisch verändern.</p>
@@ -349,10 +382,10 @@
   <section class="section" id="leistungen">
     <div class="container container--narrow">
       <p class="eyebrow eyebrow--center">Leistungen</p>
-      <h2 class="section__title section__title--center">Was im Retreat enthalten ist</h2>
+      <h2 class="heading--functional heading--functional-center">Was im Retreat enthalten ist</h2>
       <div class="leistungen">
         <div class="leistungen__col">
-          <h3 class="leistungen__title leistungen__title--yes">Im Retreat enthalten</h3>
+          <h3 class="heading--functional leistungen__title leistungen__title--yes">Im Retreat enthalten</h3>
           <ul class="icon-list icon-list--yes">
             <li>3 intensive Retreat-Tage bei mir auf Kauaʻi.</li>
             <li>1 vollständiger Erlebnis- und Integrationstag mit Sleeping-Giant-Hike und Luau.</li>
@@ -366,7 +399,7 @@
           </ul>
         </div>
         <div class="leistungen__col">
-          <h3 class="leistungen__title leistungen__title--no">Nicht enthalten</h3>
+          <h3 class="heading--functional leistungen__title leistungen__title--no">Nicht enthalten</h3>
           <ul class="icon-list icon-list--no">
             <li>Flug nach Hawaii/Kauaʻi.</li>
             <li>Hotel/Unterkunft.</li>
@@ -379,24 +412,33 @@
   </section>
 
   <!-- ============ TESTIMONIAL 2 ============ -->
-  <section class="section section--alt section--testimonial-single">
-    <div class="container container--narrow">
-      <blockquote class="testimonial testimonial--feature">
-        <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
-        <p>[Platzhalter-Testimonial: Positionierung, Business-Ergebnis, Umsatz oder Wirkung einfügen]</p>
-        <footer>
-          <span class="testimonial__name">Name</span>
-          <span class="testimonial__role">Position / Branche</span>
-        </footer>
-      </blockquote>
+  <section class="section section--island testimonial-block">
+    <div class="container">
+      <div class="testimonial-block__grid testimonial-block__grid--reverse">
+        <div class="testimonial-block__portrait" aria-hidden="true">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="92" r="44" fill="currentColor"/>
+            <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+          </svg>
+          <span class="testimonial-block__portrait-label">Foto folgt</span>
+        </div>
+        <blockquote class="testimonial-block__content">
+          <span class="testimonial-block__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial-block__quote">[Platzhalter-Testimonial: Positionierung, Business-Ergebnis, Umsatz oder Wirkung einfügen]</p>
+          <footer>
+            <span class="testimonial-block__name">Name</span>
+            <span class="testimonial-block__role">Position / Branche</span>
+          </footer>
+        </blockquote>
+      </div>
     </div>
   </section>
 
   <!-- ============ INVESTMENT ============ -->
-  <section class="section section--investment" id="investment">
+  <section class="section section--island section--investment" id="investment">
     <div class="container container--narrow">
-      <p class="eyebrow eyebrow--center">Investition</p>
-      <h2 class="section__title section__title--center">Ihre Investition</h2>
+      <p class="eyebrow eyebrow--center eyebrow--on-dark">Investition</p>
+      <h2 class="heading--functional heading--functional-center heading--on-dark">Ihre Investition</h2>
 
       <div class="price-cards">
         <div class="price-card price-card--early">
@@ -411,14 +453,14 @@
         </div>
       </div>
 
-      <p class="raten">Ratenzahlung regulär: 3 × 2.090 € (6.270 €) oder 6 × 1.090 € (6.540 €).</p>
+      <p class="raten raten--on-dark">Ratenzahlung regulär: 3 × 2.090 € (6.270 €) oder 6 × 1.090 € (6.540 €).</p>
 
       <div class="reservation-box">
         <p><strong>Mit einer Reservierungszahlung von 1.000 € über Digistore24</strong> sichern Sie sich Ihren Platz — und bei Vollzahlung bis 15. Oktober 2026 den Frühbucherpreis.</p>
         <p class="reservation-box__limit">Maximal 15 Teilnehmer.</p>
       </div>
 
-      <div class="honest-question">
+      <div class="honest-question honest-question--on-dark">
         <p>Bevor Sie reservieren, eine ehrliche Frage:</p>
         <p class="honest-question__q"><em>Welche Entscheidung schieben Sie seit Monaten vor sich her?</em></p>
         <p>Sie brauchen die Antwort jetzt noch nicht. Sie müssen nur wissen, dass es sie gibt.</p>
@@ -427,7 +469,7 @@
 
       <div class="cta-block">
         <a href="DIGISTORE24-LINK-HIER" class="btn btn--primary btn--large">Jetzt mit 1.000 € reservieren und Frühbucherpreis sichern</a>
-        <p class="cta-block__note" id="countdown-note">Noch bis 15.10.2026 zum Frühbucherpreis.</p>
+        <p class="cta-block__note cta-block__note--on-dark" id="countdown-note">Noch bis 15.10.2026 zum Frühbucherpreis.</p>
       </div>
     </div>
   </section>
@@ -443,17 +485,26 @@
   </section>
 
   <!-- ============ TESTIMONIAL 3 ============ -->
-  <section class="section section--alt section--testimonial-single">
-    <div class="container container--narrow">
-      <p class="eyebrow eyebrow--center">Was Teilnehmer über die Arbeit mit mir sagen</p>
-      <blockquote class="testimonial testimonial--feature">
-        <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
-        <p>[Platzhalter-Testimonial: Hawaii-/Retreat-Erlebnis oder tiefe persönliche Transformation einfügen]</p>
-        <footer>
-          <span class="testimonial__name">Name</span>
-          <span class="testimonial__role">Position / Branche</span>
-        </footer>
-      </blockquote>
+  <section class="section section--island testimonial-block">
+    <div class="container">
+      <p class="eyebrow eyebrow--center eyebrow--on-dark">Was Teilnehmer über die Arbeit mit mir sagen</p>
+      <div class="testimonial-block__grid">
+        <div class="testimonial-block__portrait" aria-hidden="true">
+          <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="92" r="44" fill="currentColor"/>
+            <path d="M24 232c0-58 33-96 76-96s76 38 76 96" fill="currentColor"/>
+          </svg>
+          <span class="testimonial-block__portrait-label">Foto folgt</span>
+        </div>
+        <blockquote class="testimonial-block__content">
+          <span class="testimonial-block__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial-block__quote">[Platzhalter-Testimonial: Hawaii-/Retreat-Erlebnis oder tiefe persönliche Transformation einfügen]</p>
+          <footer>
+            <span class="testimonial-block__name">Name</span>
+            <span class="testimonial-block__role">Position / Branche</span>
+          </footer>
+        </blockquote>
+      </div>
     </div>
   </section>
 
@@ -475,7 +526,7 @@
   <section class="section section--alt" id="faq">
     <div class="container container--narrow">
       <p class="eyebrow eyebrow--center">Häufige Fragen</p>
-      <h2 class="section__title section__title--center">FAQ</h2>
+      <h2 class="heading--functional heading--functional-center">FAQ</h2>
 
       <div class="faq-list">
         <details class="faq-item">
