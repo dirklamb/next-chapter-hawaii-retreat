@@ -323,47 +323,59 @@ strong { font-weight: 600; }
 .section--kauai .section__accent { color: #F1E6CC; }
 .section--kauai-alt { background: var(--color-teal-darker); text-align: center; }
 
-/* ---------- Ablauf / Timeline ---------- */
-.timeline {
-  display: grid;
-  gap: 40px;
-  margin: 48px auto 0;
+/* ---------- Ablauf / Day rows ---------- */
+.day-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  margin: 56px auto 0;
 }
-@media (min-width: 860px) {
-  .timeline { grid-template-columns: repeat(2, 1fr); gap: 32px 48px; }
+.day-row {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
-.day {
-  background: var(--color-white);
-  border: 1px solid var(--color-line);
-  border-radius: 8px;
-  padding: 32px 28px;
+.day-row__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
   box-shadow: var(--shadow-soft);
 }
-.day__number {
-  display: inline-block;
+.day-row__content { padding: 0; }
+.day-row__eyebrow {
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #fff;
-  background: var(--color-gold);
-  padding: 0.35em 0.9em;
-  border-radius: 999px;
-  margin-bottom: 1em;
+  color: var(--color-gold-deep);
+  margin: 0 0 0.7em;
 }
-.day__title { font-size: 1.35rem; }
-.day__intro { color: var(--color-ink-soft); }
-.day__question {
+.day-row__title { font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); }
+.day-row__sub { color: var(--color-ink-soft); font-size: 1.05rem; }
+.day-row__question {
   font-family: var(--font-serif);
   font-style: italic;
   color: var(--color-teal-deep);
   border-top: 1px solid var(--color-line);
   padding-top: 1em;
-  margin-top: 1.2em;
+  margin-top: 1.4em;
   margin-bottom: 0;
 }
-.day__question--final { font-style: normal; font-weight: 500; }
+.day-row__question--final { font-style: normal; font-weight: 500; }
+
+@media (min-width: 900px) {
+  .day-rows { gap: 128px; margin-top: 80px; }
+  .day-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+  }
+  .day-row--reverse { flex-direction: row-reverse; }
+  .day-row__media { flex: 0 0 45%; max-width: 45%; }
+  .day-row__content { flex: 0 0 55%; max-width: 55%; padding-top: 12px; }
+}
 
 /* ---------- Leistungen ---------- */
 .leistungen {
