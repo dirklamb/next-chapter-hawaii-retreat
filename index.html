@@ -23,7 +23,8 @@
 <meta name="twitter:image" content="https://dirklamb.github.io/next-chapter-hawaii-retreat/assets/og-image.jpg">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="assets/hero-kauai.jpg">
+<link rel="preload" as="image" href="assets/hero-kauai-desktop.jpg" media="(min-width: 1100px)">
+<link rel="preload" as="image" href="assets/hero-kauai.jpg" media="(max-width: 1099px)">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,7 +43,10 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <div class="hero__media">
-      <img src="assets/hero-kauai.jpg" width="1448" height="1086" alt="Sonnenuntergang über der Nā Pali Küste auf Kauaʻi, Blick von einer Lounge-Terrasse mit Feuerschalen über die Steilküste und den Pazifik" fetchpriority="high">
+      <picture>
+        <source media="(min-width: 1100px)" srcset="assets/hero-kauai-desktop.jpg">
+        <img src="assets/hero-kauai.jpg" width="1448" height="1086" alt="Sonnenuntergang über der Nā Pali Küste auf Kauaʻi, Blick von einer Lounge-Terrasse mit Feuerschalen über die Steilküste und den Pazifik" fetchpriority="high">
+      </picture>
       <div class="hero__scrim"></div>
     </div>
     <div class="hero__panel">
