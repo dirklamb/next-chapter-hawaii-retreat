@@ -20,7 +20,7 @@
 
   // ---- Reveal-on-scroll for section titles and cards ----
   var revealTargets = document.querySelectorAll(
-    ".section__title, .day-row, .price-card, .testimonial--feature, .reservation-box"
+    ".section__title, .heading--functional, .day-row, .price-card, .testimonial-block__grid, .reservation-box, .guest"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
