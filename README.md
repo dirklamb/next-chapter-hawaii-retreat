@@ -8,7 +8,8 @@ GitHub Pages.
 
 - `index.html` — die Landingpage
 - `styles.css` — komplettes Design
-- `script.js` — Sticky-CTA, Reveal-Animationen, Frühbucher-Countdown
+- `script.js` — Sticky-CTA, Reveal-Animationen, Frühbucher-Countdown,
+  Exit-Intent-Popup
 - `assets/` — Hero-Bild, OG-Bild, Favicon
 - `impressum.html`, `datenschutz.html` — rechtliche Platzhalterseiten
 
@@ -24,14 +25,18 @@ GitHub Pages.
 3. **Testimonials**: 3 Platzhalter-Zitate in `index.html` (markiert mit
    `[Platzhalter-Testimonial: ...]`) durch echte Teilnehmerstimmen
    ersetzen.
-4. **Bildmaterial**: Aktuell wird nur das vorhandene Hero-Bild
-   (`assets/hero-kauai.jpg`) verwendet. Für noch mehr visuelle Wirkung
-   können weitere großformatige Kauaʻi-Fotos (Waimea Canyon, Sleeping
-   Giant, Feuerlauf, Luau, Massage, Special Guests) in den entsprechenden
-   Abschnitten ergänzt werden.
+4. **Bildmaterial**: Special-Guests-Porträts und die drei Testimonial-Porträts
+   sind aktuell Platzhalter-Icons. Für noch mehr visuelle Wirkung durch echte
+   Fotos ersetzen, sobald verfügbar.
 5. **Canonical-/OG-URL**: In `index.html` ist als Platzhalter-Domain
    `https://dirklamb.github.io/next-chapter-hawaii-retreat/` hinterlegt —
    bei abweichender GitHub-Pages-URL oder eigener Domain anpassen.
+6. **Exit-Intent-Popup-Formular**: Das Formular im Exit-Intent-Popup
+   (Vorname/E-Mail/Telefon) zeigt aktuell nur eine clientseitige
+   Bestätigung an und sendet die Daten nirgendwo hin. Vor dem Livegang an
+   ein echtes E-Mail-/CRM-Tool (z. B. den Newsletter-Anbieter für THE NEXT
+   CHAPTER) anbinden — siehe Kommentar in `script.js` beim
+   `exitPopupForm`-Submit-Handler.
 
 ## Lokal testen
 
