@@ -648,29 +648,6 @@ section[id], #main { scroll-margin-top: 88px; }
   color: #fff;
   background: linear-gradient(180deg, rgba(20,38,34,0) 0%, rgba(15,26,23,0.82) 100%);
 }
-.exp-tile--concept {
-  background: linear-gradient(160deg, var(--color-teal-deep) 0%, var(--color-teal-darker) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding: 20px;
-  color: var(--color-gold-light);
-}
-.exp-tile__icon {
-  width: 34%;
-  height: auto;
-  transition: transform 0.5s ease;
-}
-.exp-tile--concept:hover .exp-tile__icon { transform: scale(1.1); }
-.exp-tile--concept .exp-tile__caption {
-  position: static;
-  background: none;
-  padding: 0;
-  text-align: center;
-  color: var(--color-gold-light);
-}
 .exp-tiles__more {
   text-align: center;
   font-family: var(--font-serif);
